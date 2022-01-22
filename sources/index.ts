@@ -53,7 +53,8 @@ const getDuplicatedPackageGroups = (
   project: Project,
   targetPackageNames: string[]
 ): Duplicates | undefined => {
-  const packagePathName = (p: Package) => `@${p.scope}/${p.name}`;
+  const packagePathName = (p: Package) =>
+    p.scope === null ? p.name : `@${p.scope}/${p.name}`;
 
   const targetPackages = Array.from(project.storedPackages.values()).filter(
     (p) => targetPackageNames.includes(packagePathName(p))
