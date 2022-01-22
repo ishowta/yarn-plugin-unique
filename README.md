@@ -5,7 +5,7 @@ Detect duplicate packages that are not allowed to have multiple versions running
 
 1. Import this plugin
 ```sh
-yarn plugin import https://raw.githubusercontent.com/ishowta/yarn-plugin-unique/main/bundles/@yarnpkg/plugin-unique.js
+yarn plugin import https://raw.githubusercontent.com/ishowta/yarn-plugin-unique/alpha/bundles/@yarnpkg/plugin-unique.js
 ```
 
 2. Fill in the `uniquePackages` field in `package.json` with the list of packages you want to make unique.
