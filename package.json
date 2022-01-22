@@ -1,6 +1,5 @@
 {
   "name": "yarn-plugin-unique",
-  "private": true,
   "license": "MIT",
   "main": "./sources/index.ts",
   "version": "0.0.0-development",
