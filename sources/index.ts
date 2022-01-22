@@ -52,7 +52,7 @@ const getTargetPackageNames = (cwd: PortablePath): string[] | undefined => {
 const getDuplicatedPackageGroups = (
   project: Project,
   targetPackageNames: string[]
-): Duplicates | undefined => {
+): Duplicates => {
   const packagePathName = (p: Package) =>
     p.scope === null ? p.name : `@${p.scope}/${p.name}`;
 
@@ -89,7 +89,7 @@ const plugin: Plugin = {
         project,
         targetPackageNames
       );
-      if (duplicatedPackageGroups) {
+      if (duplicatedPackageGroups.length > 0) {
         printPackageDuplicated(duplicatedPackageGroups);
         exit(1);
       }
